@@ -228,12 +228,22 @@ python adaptive_pipeline.py --dicom_path path/to/image.dcm
 ```bash
 adaptive-iopa-preprocessing/
 │
-├── adaptive_pipeline.ipynb           # Main notebook with all preprocessing logic
-├── sample_dicom/                     # DICOM test images
-├── outputs/                          # Enhanced outputs and comparison images
-├── images/                           # Visuals used in README/report
+├── notebooks/
+│   └── exploration.ipynb             # Initial experiments and prototyping
+│
+├── src/
+│   ├── quality_metrics.py            # Functions for brightness, contrast, etc.
+│   ├── static_pipeline.py            # Static preprocessing baseline
+│   ├── adaptive_pipeline.py          # Adaptive preprocessing logic
+│   └── utils.py                      # Load/display/normalize functions
+│
+├── images/
+│   └── comparison_examples/          # Raw vs. static vs. adaptive examples
+│
+├── run_pipeline.py                   # Script to run the pipeline
 ├── requirements.txt
-└── README.md                         # This file (project report)
+└── README.md                         # Assignment report (this file)
+
 ```
 
 ---
